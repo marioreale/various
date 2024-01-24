@@ -178,7 +178,7 @@ chmod o-rwx tmp files log config/config.php
 
 [TOC](#table-of-contents)
 
-## Configure FileSender.   ( MR qui c'era ovunque nelle righe del file un \ di troppo all inizio di ogni riga anche root@localhost etc etc andrebbe cambiato in actual values )
+## Configure FileSender.   
 
 See the /opt/filesender/config/config_sample.php to understand changes done below:
 
@@ -267,7 +267,6 @@ Enable FileSender Apache conf:
  - a2enconf filesender
  - systemctl restart apache2 
 
-# qui c'era .conf errore 
 
 [TOC](#table-of-contents)
 
