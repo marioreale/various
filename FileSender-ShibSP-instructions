@@ -161,15 +161,15 @@ sudo mysql_secure_installation
 sudo mysql
 
 > CREATE DATABASE filesender_db DEFAULT CHARACTER SET utf8mb4;
-> CREATE USER "filesender-db-user"@"localhost" IDENTIFIED BY "<PASSWORD>";
-> GRANT ALL PRIVILEGES ON filesender_db.* TO "filesender-db-user"@"localhost";
+> CREATE USER "fs_db_user"@"localhost" IDENTIFIED BY "<PASSWORD>";
+> GRANT ALL PRIVILEGES ON filesender_db.* TO "fs_db_user"@"localhost";
 > quit
 
 [TOC](#table-of-contents)
 
-## Install FileSender
+## Install FileSender. (MR comando corretto)
 
-sudo git clone --depth 1 --branch master git clone --depth 1 --branch master https://github.com/filesender/filesender.git /opt/filesender
+sudo git clone --depth 1 --branch master https://github.com/filesender/filesender.git /opt/filesender    
 
 cd /opt/filesender
 mkdir -p tmp files log
@@ -178,42 +178,42 @@ chmod o-rwx tmp files log config/config.php
 
 [TOC](#table-of-contents)
 
-## Configure FileSender
+## Configure FileSender.   ( MR qui c'era ovunque nelle righe del file un \ di troppo all inizio di ogni riga anche root@localhost etc etc andrebbe cambiato in actual values )
 
 See the /opt/filesender/config/config_sample.php to understand changes done below:
 
 bash -c "cat > /opt/filesender/config/config.php <<EOF
 <?php
 
-\\\$config['site-url'] = 'https://$(hostname -f)/';
+\\$config['site_url'] = 'https://$(hostname -f)/';
 
-\\\$config['admin'] = 'root@localhost.localdomain';
-\\\$config['admin_email'] = 'root@localhost.localdomain';
+\\$config['admin'] = 'root@localhost.localdomain';
+\\$config['admin_email'] = 'root@localhost.localdomain';
 
-\\\$config['email_reply_to'] = '';
+\\$config['email_reply_to'] = '';
 
-\\\$config['db_type'] ='mysql';
-\\\$config['db_host'] ='localhost';
-\\\$config['db_database'] ='filesender_db';
-\\\$config['db_username'] ='filesender-db-user';
-\\\$config['db_password'] ='filesender-db-password';
-\\\$config['db_username_admin'] = 'filesender-db-user';
-\\\$config['db_password_admin'] = 'filesender-db-password';
+\\$config['db_type'] ='mysql';
+\\$config['db_host'] ='localhost';
+\\$config['db_database'] ='filesender_db';
+\\$config['db_username'] ='fs_db_user';
+\\$config['db_password'] ='fs_db_pw';
+\\$config['db_username_admin'] = 'fs_db_user';
+\\$config['db_password_admin'] = 'fs_db_pw';
 
-\\\$config['auth_sp_type'] = 'shibboleth';
-\\\$config['auth_sp_shibboleth_email_attribute'] = 'mail';
-\\\$config['auth_sp_shibboleth_name_attribute'] = 'cn';
-\\\$config['auth_sp_shibboleth_uid_attribute'] = 'persistent-id';
-\\\$config['auth_sp_shibboleth_login_url'] = '/Shibboleth.sso/Login?return={target}';
-\\\$config['auth_sp_shibboleth_logout_url'] = '/Shibboleth.sso/Logout?return={target}';
+\\$config['auth_sp_type'] = 'shibboleth';
+\\$config['auth_sp_shibboleth_email_attribute'] = 'mail';
+\\$config['auth_sp_shibboleth_name_attribute'] = 'cn';
+\\$config['auth_sp_shibboleth_uid_attribute'] = 'persistent-id';
+\\$config['auth_sp_shibboleth_login_url'] = '/Shibboleth.sso/Login?return={target}';
+\\$config['auth_sp_shibboleth_logout_url'] = '/Shibboleth.sso/Logout?return={target}';
 
-\\\$config['terasender_enabled'] = true;
-\\\$config['terasender_advanced'] = true;
-\\\$config['terasender_worker_count'] = 5;
-\\\$config['terasender_start_mode'] = 'single';
+\\$config['terasender_enabled'] = true;
+\\$config['terasender_advanced'] = true;
+\\$config['terasender_worker_count'] = 5;
+\\$config['terasender_start_mode'] = 'single';
 
-\\\$config['storage_type'] = 'filesystem';
-\\\$config['storage_filesystem_path'] = '/opt/filesender/files';
+\\$config['storage_type'] = 'filesystem';
+\\$config['storage_filesystem_path'] = '/opt/filesender/files';
 EOF"
 
 sudo chown www-data /opt/filesender/log /opt/filesender/files /opt/filesender/config/config.php
@@ -265,7 +265,9 @@ Replace the DocumentRoot with the correct one:
 Enable FileSender Apache conf:
 
  - a2enconf filesender
- - systemctl restart apache2.conf
+ - systemctl restart apache2 
+
+# qui c'era .conf errore 
 
 [TOC](#table-of-contents)
 
@@ -276,3 +278,12 @@ Ubuntu:
  - sudo cp /opt/filesender/config-templates/filesender-php.ini /etc/php/8.1/apache2/conf.d
  
 systemctl restart apache2.service
+
+
+
+
+
+
+
+    
+
