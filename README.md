@@ -1,2 +1,2 @@
 # various
-various bash scripts
+various bash scripts and other instructions files
