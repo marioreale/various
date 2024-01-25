@@ -14,6 +14,7 @@ Authors: Mario Reale/GÉANT - Marco Malavolti/GARR
 5.  [Install Shibboleth Service Provider](#install-shibboleth-service-provider)
 6.  [Install Dependencies](#install-dependencies)
 7.  [Install MySQL server](#Install-MySQL-server)
+    1.   [Improve MySQL installation security](#Improve-MySQL-installation-security)
 
 
 ## Requirements
@@ -152,7 +153,7 @@ sudo apt install default-mysql-server php-mysql
 ```
 [TOC](#table-of-contents)
 
-## Improve MySQL Installation Security:
+### Improve MySQL Installation Security:
 ```text
 sudo mysql_secure_installation
 ```
@@ -164,7 +165,7 @@ sudo mysql_secure_installation
 
 [TOC](#table-of-contents)
 
-## Create FileSender Database
+### Create FileSender Database
 
 ``` text
 sudo mysql
