@@ -243,17 +243,22 @@ sudo chown www-data /opt/filesender/log /opt/filesender/files /opt/filesender/co
 
 ## Initialise FileSender database
 
+``` text
 cd /opt/filesender/config ; php /opt/filesender/scripts/upgrade/database.php
-
+```
 ## Configure FileSender Cron
 
+``` text
 cp /opt/filesender/config-templates/cron/filesender /etc/cron.daily/filesender
 chmod +x /etc/cron.daily/filesender
+```
 
 ## Configure Apache
 
+``` text
 a2enmod alias headers ssl
-
+```
+``` text
 bash -c 'cat > /etc/apache2/conf-available/filesender.conf <<EOF
      <Directory "/opt/filesender">
         Header always append X-Frame-Options SAMEORIGIN
@@ -278,6 +283,7 @@ bash -c 'cat > /etc/apache2/conf-available/filesender.conf <<EOF
         require shibboleth
      </Location>
 EOF'
+``
 
 Replace the DocumentRoot with the correct one:
 
