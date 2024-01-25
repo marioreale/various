@@ -139,20 +139,21 @@ https://github.com/GEANT/edugain-training/blob/main/UbuntuNet-Training-202401/tu
 
 ## Install Dependencies
 
+``` text
 sudo apt install php php-mbstring php-xml php-json libapache2-mod-php git
-
+```
 [TOC](#table-of-contents)
 
 ## Install MySQL server
-
+``` text
 sudo apt install default-mysql-server php-mysql
-
+```
 [TOC](#table-of-contents)
 
 ## Improve MySQL Installation Security:
-
+```text
 sudo mysql_secure_installation
-
+```
 - VALIDATE PASSWORD COMPONENT: N
 - Remove anonymous users? Y
 - Disallow root login remotely? Y
@@ -163,8 +164,9 @@ sudo mysql_secure_installation
 
 ## Create FileSender Database
 
+``` text
 sudo mysql
-
+```
 > CREATE DATABASE filesender_db DEFAULT CHARACTER SET utf8mb4;
 > CREATE USER "fs_db_user"@"localhost" IDENTIFIED BY "<PASSWORD>";
 > GRANT ALL PRIVILEGES ON filesender_db.* TO "fs_db_user"@"localhost";
@@ -172,7 +174,7 @@ sudo mysql
 
 [TOC](#table-of-contents)
 
-## Install FileSender. (MR comando corretto)
+## Install FileSender. 
 
 sudo git clone --depth 1 --branch master https://github.com/filesender/filesender.git /opt/filesender    
 
