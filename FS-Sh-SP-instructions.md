@@ -167,21 +167,27 @@ sudo mysql_secure_installation
 ``` text
 sudo mysql
 ```
+
+``` text
 > CREATE DATABASE filesender_db DEFAULT CHARACTER SET utf8mb4;
 > CREATE USER "fs_db_user"@"localhost" IDENTIFIED BY "<PASSWORD>";
 > GRANT ALL PRIVILEGES ON filesender_db.* TO "fs_db_user"@"localhost";
 > quit
+```
 
 [TOC](#table-of-contents)
 
 ## Install FileSender. 
 
+``` text
 sudo git clone --depth 1 --branch master https://github.com/filesender/filesender.git /opt/filesender    
-
+```
+``` text
 cd /opt/filesender
 mkdir -p tmp files log
 touch config/config.php
 chmod o-rwx tmp files log config/config.php
+```
 
 [TOC](#table-of-contents)
 
