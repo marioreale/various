@@ -287,15 +287,22 @@ EOF'
 
 Replace the DocumentRoot with the correct one:
 
+``` text
  - sed -i 's|DocumentRoot .*|DocumentRoot /opt/filesender/www|' /etc/apache2/sites-enabled/$(hostname -f).conf
+```
 
+``` text
 chown -R www-data /opt/filesender/www
+```
 
 Enable FileSender Apache conf:
 
- - a2enconf filesender
- - systemctl restart apache2 
-
+``` text
+a2enconf filesender
+```
+``` text
+systemctl restart apache2 
+```
 
 [TOC](#table-of-contents)
 
@@ -304,10 +311,14 @@ Enable FileSender Apache conf:
 ### Configure PHP
 
 Ubuntu:
- - sudo cp /opt/filesender/config-templates/filesender-php.ini /etc/php/8.1/apache2/conf.d
- 
-systemctl restart apache2.service
 
+``` text
+sudo cp /opt/filesender/config-templates/filesender-php.ini /etc/php/8.1/apache2/conf.d
+```
+
+``` text 
+systemctl restart apache2.service
+```
 
 
 REFERENCES:
