@@ -16,6 +16,7 @@ Authors: Mario Reale/GÉANT - Marco Malavolti/GARR
 7.  [Install MySQL server](#Install-MySQL-server)
     1.   [Improve MySQL installation security](#Improve-MySQL-installation-security)
     2.   [Create FileSender Database](#Create-FileSender-Database)
+8. [Install Filesender](#Install-Filesender)
 
 
 ## Requirements
@@ -181,7 +182,7 @@ sudo mysql
 
 [TOC](#table-of-contents)
 
-### Install FileSender 
+## Install FileSender 
 
 ``` text
 sudo git clone --depth 1 --branch master https://github.com/filesender/filesender.git /opt/filesender    
