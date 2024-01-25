@@ -283,7 +283,7 @@ bash -c 'cat > /etc/apache2/conf-available/filesender.conf <<EOF
         require shibboleth
      </Location>
 EOF'
-``
+```
 
 Replace the DocumentRoot with the correct one:
 
