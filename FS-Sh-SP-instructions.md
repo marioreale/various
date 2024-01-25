@@ -13,6 +13,7 @@ Authors: Mario Reale/GÉANT - Marco Malavolti/GARR
 4.  [Configure APT Mirror](#configure-apt-mirror)
 5.  [Install Shibboleth Service Provider](#install-shibboleth-service-provider)
 6.  [Install Dependencies](#install-dependencies)
+7.  [Install MySQL server](#Install MySQL server)
 
 
 ## Requirements
