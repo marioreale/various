@@ -126,11 +126,14 @@ Example with the Consortium GARR italian mirrors:
 
 ## Install Shibboleth Service Provider
 
+``` text
 https://github.com/GEANT/edugain-training/blob/main/UbuntuNet-Training-202401/tutorials/HOWTO-Install-and-Configure-a-Shibboleth-SP-v3-on-Debian-based-Linux-Distribution.md
+```
 
 and connect it to your IdP with:
-
+``` text
 https://github.com/GEANT/edugain-training/blob/main/UbuntuNet-Training-202401/tutorials/HOWTO-Install-and-Configure-a-Shibboleth-SP-v3-on-Debian-based-Linux-Distribution.md#connect-a-service-provider-directly-to-an-identity-provider
+```
 
 [TOC](#table-of-contents)
 
