@@ -1,4 +1,6 @@
-# HOWTO Install and Configure FileSender with a Shibboleth SP v3 on Debian based Linux Distribution - M.Reale GÉANT - M.Malavolti GARR
+# HOWTO Install and Configure FileSender with a Shibboleth SP v3 on Debian based Linux Distribution 
+
+Authors: Mario Reale/GÉANT - Marco Malavolti/GARR
 
 ## Table of Contents
 
