@@ -180,7 +180,7 @@ sudo mysql
 
 [TOC](#table-of-contents)
 
-### Install FileSender. 
+### Install FileSender 
 
 ``` text
 sudo git clone --depth 1 --branch master https://github.com/filesender/filesender.git /opt/filesender    
@@ -195,10 +195,11 @@ chmod o-rwx tmp files log config/config.php
 
 [TOC](#table-of-contents)
 
-### Configure FileSender.   
+### Configure FileSender   
 
 See the /opt/filesender/config/config_sample.php to understand changes done below:
 
+``` text
 bash -c "cat > /opt/filesender/config/config.php <<EOF
 <?php
 
@@ -232,8 +233,11 @@ bash -c "cat > /opt/filesender/config/config.php <<EOF
 \\$config['storage_type'] = 'filesystem';
 \\$config['storage_filesystem_path'] = '/opt/filesender/files';
 EOF"
+```
 
+``` text
 sudo chown www-data /opt/filesender/log /opt/filesender/files /opt/filesender/config/config.php
+```
 
 [TOC](#table-of-contents)
 
