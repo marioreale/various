@@ -15,6 +15,7 @@ Authors: Mario Reale/GÉANT - Marco Malavolti/GARR
 6.  [Install Dependencies](#install-dependencies)
 7.  [Install MySQL server](#Install-MySQL-server)
     1.   [Improve MySQL installation security](#Improve-MySQL-installation-security)
+    2.   [Create FileSender Database](#Create-FileSender-Database)
 
 
 ## Requirements
