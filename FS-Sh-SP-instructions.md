@@ -177,11 +177,12 @@ sudo mysql
 
 [TOC](#table-of-contents)
 
-## Install FileSender. 
+### Install FileSender. 
 
 ``` text
 sudo git clone --depth 1 --branch master https://github.com/filesender/filesender.git /opt/filesender    
 ```
+
 ``` text
 cd /opt/filesender
 mkdir -p tmp files log
@@ -191,7 +192,7 @@ chmod o-rwx tmp files log config/config.php
 
 [TOC](#table-of-contents)
 
-## Configure FileSender.   
+### Configure FileSender.   
 
 See the /opt/filesender/config/config_sample.php to understand changes done below:
 
@@ -286,7 +287,8 @@ Enable FileSender Apache conf:
 [TOC](#table-of-contents)
 
 
-## Configure PHP
+
+### Configure PHP
 
 Ubuntu:
  - sudo cp /opt/filesender/config-templates/filesender-php.ini /etc/php/8.1/apache2/conf.d
