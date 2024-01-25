@@ -13,7 +13,7 @@ Authors: Mario Reale/GÉANT - Marco Malavolti/GARR
 4.  [Configure APT Mirror](#configure-apt-mirror)
 5.  [Install Shibboleth Service Provider](#install-shibboleth-service-provider)
 6.  [Install Dependencies](#install-dependencies)
-7.  [Install MySQL server](#Install MySQL server)
+7.  [Install MySQL server](#Install-MySQL-server)
 
 
 ## Requirements
@@ -146,6 +146,7 @@ sudo apt install php php-mbstring php-xml php-json libapache2-mod-php git
 [TOC](#table-of-contents)
 
 ## Install MySQL server
+
 ``` text
 sudo apt install default-mysql-server php-mysql
 ```
