@@ -17,6 +17,7 @@ Authors: Mario Reale/GÉANT - Marco Malavolti/GARR
     1.   [Improve MySQL installation security](#Improve-MySQL-installation-security)
     2.   [Create FileSender Database](#Create-FileSender-Database)
 8. [Install Filesender](#Install-Filesender)
+9. [Configure Filesender](#Configure-Filesender)
 
 
 ## Requirements
