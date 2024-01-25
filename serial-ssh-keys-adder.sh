@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#assuming you are using ssh-ageant and do not need to type in each time your private key password to login on the remote VMs
+#assuming you are using ssh-agent and do not need to type in each time your private key password to login on the remote VMs
 # eval $(ssh-agent)
 # ssh-add ./id_rsa  
 #
