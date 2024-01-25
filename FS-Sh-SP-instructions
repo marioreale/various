@@ -262,6 +262,8 @@ Replace the DocumentRoot with the correct one:
 
  - sed -i 's|DocumentRoot .*|DocumentRoot /opt/filesender/www|' /etc/apache2/sites-enabled/$(hostname -f).conf
 
+chown -R www-data /opt/filesender/www
+
 Enable FileSender Apache conf:
 
  - a2enconf filesender
@@ -280,7 +282,12 @@ systemctl restart apache2.service
 
 
 
+REFERENCES:
 
+Please refer to 
+https://docs.filesender.org/filesender/v2.0/install/
+
+and to the HowTo mentioned above by Marco Malavolti for the Shib SP
 
 
 
