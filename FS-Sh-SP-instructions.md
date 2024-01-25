@@ -288,7 +288,7 @@ EOF'
 Replace the DocumentRoot with the correct one:
 
 ``` text
- - sed -i 's|DocumentRoot .*|DocumentRoot /opt/filesender/www|' /etc/apache2/sites-enabled/$(hostname -f).conf
+sed -i 's|DocumentRoot .*|DocumentRoot /opt/filesender/www|' /etc/apache2/sites-enabled/$(hostname -f).conf
 ```
 
 ``` text
